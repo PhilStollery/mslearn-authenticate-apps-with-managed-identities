@@ -28,7 +28,7 @@ namespace secretapp
                     .GetSecretAsync($"https://{keyVaultName}.vault.azure.net/secrets/{keyVaultSecretName}")
                     .ConfigureAwait(false);
 
-                Console.WriteLine($"Secret: {secret.Value}");
+                Console.WriteLine($"Database connection string: {secret.Value}");
 
             }
             catch (Exception exp)
